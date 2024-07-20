@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+  color: hsl(0 0% 100%);
+  font-size: 3rem;
+  line-height: 3rem;
+  margin: 0 auto;
+}
+
+.scroll-show-text-color {
+  color: hsl(0 0% 100% / 0.2);
+  background-image: linear-gradient(90deg, red, blue);
+  font-size: 2rem;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  animation: scroll-show-text-color linear forwards;
+  animation-timeline: view();
+  animation-range: contain;
+}
+
+@keyframes scroll-show-text-color {
+  to {
+    background-size: 100% 100%;
+  }
+}
